@@ -3,13 +3,21 @@
 - Studio Name: Triple A
 - Genre: Horror + ?
 
+## Abstract of Where We're At (Updated 08/09/25)
+
+The user is plays a character moving into a new house/studio. This house is run by an artificial intelligence, which at first seems friendly - but, unbeknownst to the user, the house is attempting to assimilate them into a robot (or potentially some alternative threat).
+
+Each day, the character returns home from a busy day of work (this is the playspace of the player). The player must perform their daily chores of cleaning and maintenance of the house. However, as the days pass, the house seems to consist of more and more anomilies. When the player interacts with them, they seem to dissipate - but if left to their own accords once the player goes to sleep, the player will face consequences.
+
+To provide some pressure, the player must always wake up at a certain time for work (say 7am). The character requires 8 hours to fully function the next day, making it a priority to sleep by a certain time - otherwise, debuffs are placed on the player the next day depending on the hours obtained.
+
 ## Themes
 
 - Abominations (basically monsters)
 
 - Playing off idea of 'Guess AI Generated Images'
 
-- Spotting 'zombies' similar-ish to papers please
+- Spotting 'artifacts' similar-ish to papers please
 
 ## Setting
 
@@ -56,3 +64,14 @@ You can go to sleep whenever you want, but if you miss an anomoly before you go 
 - What is the AIs goals?
 - How is the AI trying to stop us?
 - What do you do during the day?
+- What is the perspective?
+    - Static images with point and click?
+    - (Or) Top-down world?
+
+## Ideas/Thoughts
+
+- Since Doki Doki is the game that resonated when brainstorming for this I asked 'What makes this game scary?'. After looking through some Pewdiepie playthroughs, I found that the most scary part of that game is *contrast*. Basically, there are two dimensions to this in Doki Doki.
+
+The first is how Doki Doki builds the game up to be very innocent. From what I skimmed through, the first 4 hours of gameplay are your basic narrative-centric game. This means that throughout the first 4 hours, all you know is that this is a normal game, and you construct that belief through various hours of gameplay. The horror then comes with a shocking surprise after the 4th hour, where all of a sudden you realize that the game is not as innocent as it seems. This could be a fun idea to play with for our game: we lead the player to believe that the game is innocent, and then after some time begin to incorporate the horror aspects.
+
+The second dimension of contrast comes from the art-style and artistic build of the game. Doki Doki uses anime styled characters specifically 'cute anime girls' (lol never thought I'd write that for a project). Given this style, there is a sharp contrast once the horror elements of the game are introduced which I believe add to the shock factor. This could also be a fun thing to play with, if we made our art-style feel cute and playful (maybe not with anime girls) and then shocked the audience with the contrast of gruesome/graphic images imposed over these seemingly cute characters.
