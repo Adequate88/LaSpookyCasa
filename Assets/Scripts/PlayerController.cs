@@ -1,39 +1,49 @@
+
+using System.Collections;
 using UnityEngine;
+
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
 
-    private PlayerControls playerControls;
-    private Vector2 movement;
-    private Rigidbody2D rb;
+    private bool isMoving = false;
 
-    private void Awake() {
-        playerControls = new PlayerControls();
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void OnEnable()
-    {
-        playerControls.Enable();
-    }
+    private Vector2 input;
 
     private void Update()
     {
-        PlayerInput();
+        if (!isMoving)
+        {
+            input.x = Input.GetAxisRaw("Horizontal");
+            input.y = Input.GetAxisRaw("Vertical");
+
+            if (input.x != 0) input.y = 0; // Prevent diagonal movement
+
+            if (input != Vector2.zero)
+            {
+                var targetPos = transform.position;
+                targetPos.x += input.x;
+                targetPos.y += input.y;
+
+                StartCoroutine(Move(targetPos));
+            }
+        }
     }
 
-    private void FixedUpdate()
+    IEnumerator Move(Vector3 targetPos)
     {
-        Move();
-    }
+        isMoving = true;
 
-    private void PlayerInput() {
-        movement = playerControls.Movement.Move.ReadValue<Vector2>();
-    }
+        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
 
-    private void Move() {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        transform.position = targetPos;
+
+        isMoving = false;
     }
 
 }
