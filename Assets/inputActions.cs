@@ -100,6 +100,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Torch"",
+                    ""type"": ""Button"",
+                    ""id"": ""1131e8c8-c5bc-4477-afa3-128c9acff0c9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -113,6 +122,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""919ba62b-547d-4ab7-bff3-cbb3ddeba9f0"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Torch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +142,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         // PlayerNight
         m_PlayerNight = asset.FindActionMap("PlayerNight", throwIfNotFound: true);
         m_PlayerNight_Look = m_PlayerNight.FindAction("Look", throwIfNotFound: true);
+        m_PlayerNight_Torch = m_PlayerNight.FindAction("Torch", throwIfNotFound: true);
     }
 
     ~@InputActions()
@@ -203,6 +224,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerNight;
     private List<IPlayerNightActions> m_PlayerNightActionsCallbackInterfaces = new List<IPlayerNightActions>();
     private readonly InputAction m_PlayerNight_Look;
+    private readonly InputAction m_PlayerNight_Torch;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerNight".
     /// </summary>
@@ -218,6 +240,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerNight/Look".
         /// </summary>
         public InputAction @Look => m_Wrapper.m_PlayerNight_Look;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerNight/Torch".
+        /// </summary>
+        public InputAction @Torch => m_Wrapper.m_PlayerNight_Torch;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -247,6 +273,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Torch.started += instance.OnTorch;
+            @Torch.performed += instance.OnTorch;
+            @Torch.canceled += instance.OnTorch;
         }
 
         /// <summary>
@@ -261,6 +290,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Torch.started -= instance.OnTorch;
+            @Torch.performed -= instance.OnTorch;
+            @Torch.canceled -= instance.OnTorch;
         }
 
         /// <summary>
@@ -308,5 +340,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Torch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTorch(InputAction.CallbackContext context);
     }
 }
