@@ -8,6 +8,7 @@ public class torchScript : MonoBehaviour
     private Transform torchTransform;
     private Light2D light;
     private InputActions inputActions;
+    private CircleCollider2D circleCollider;
 
     private bool switchOn;
     private bool switchPressed;
@@ -18,6 +19,7 @@ public class torchScript : MonoBehaviour
         inputActions = new InputActions();
         torchTransform = GetComponent<Transform>();
         light = GetComponent<Light2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
         inputActions.Enable();
         switchOn = false;
         switchPressed = false;
@@ -28,11 +30,9 @@ public class torchScript : MonoBehaviour
     {
         // Screen coordinates in pixels (bottom-left = (0,0))
         Vector2 screenPos = Mouse.current.position.ReadValue();
-        Debug.Log("Mouse Screen Position: " + screenPos);
 
         // Convert to world position (e.g. for placing objects in 2D)
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, Camera.main.nearClipPlane));
-        Debug.Log("Mouse World Position: " + worldPos);
 
         bool torchButtonInput = inputActions.PlayerNight.Torch.IsPressed();
 
@@ -40,11 +40,13 @@ public class torchScript : MonoBehaviour
 
         if (switchOn)
         {
-            light.intensity = 0;
+            light.intensity = 2;
+            circleCollider.enabled = true;
         }
         else
         {
-            light.intensity = 2;
+            light.intensity = 0;
+            circleCollider.enabled = false;
         }
 
         torchTransform.position = worldPos;
