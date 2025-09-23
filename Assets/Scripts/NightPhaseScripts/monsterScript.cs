@@ -5,15 +5,20 @@ public class monsterScript : MonoBehaviour
 {
 
     private timerScript timer;
-    [SerializeField] GameObject[] spawnPoints;
+    [SerializeField] SpawnPointScript[] spawnPoints;
     [SerializeField] private float moveTime;
     [SerializeField] private float stunTime;
-    [SerializeField] private float fadeSpeed;
+    [SerializeField] private float fadeTime;
+    [SerializeField] private int startHealth;
+
 
     private float curMoveTime;
+    private float curFadeTime;
     private float curStunTime;
     private bool flashed;
     private bool anim;
+
+    private int curHealth;
 
     private Transform curSpawn;
 
@@ -38,77 +43,101 @@ public class monsterScript : MonoBehaviour
         curStunTime = stunTime;
         flashed = false;
         anim = false;
+        curHealth = startHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!anim)
+        if (curHealth > 0)
         {
-            ResetAlpha(sprite);
-
-            if (flashed)
+            if (!anim)
             {
-                timer.count(ref curStunTime);
-            }
+                ResetAlpha(sprite);
+                curFadeTime = fadeTime;
 
-            if (curStunTime <= 0)
-            {
-                flashed = false;
-                anim = true;
-            }
-
-            if (curMoveTime <= 0 && !flashed)
-            {
-                //choose if he is visible
-                if (Random.Range(0, 2) == 1)
+                if (flashed)
                 {
-                    enemyCollider.enabled = false;
-                    sprite.enabled = false;
-                }
-                else
-                {
-                    enemyCollider.enabled = true;
-                    sprite.enabled = true;
+                    timer.count(ref curStunTime);
                 }
 
-                int spawn;
-
-                do
+                if (curStunTime <= 0)
                 {
-                    spawn = Random.Range(0, spawnPoints.Length);
+                    anim = true;
                 }
-                while (spawn == prevSpawn);
 
-                prevSpawn = spawn;
+                if (curMoveTime <= 0 && !flashed)
+                {
+                    //choose if he is visible
+                    if (Random.Range(0, 2) == 1)
+                    {
+                        enemyCollider.enabled = false;
+                        sprite.enabled = false;
+                    }
+                    else
+                    {
+                        enemyCollider.enabled = true;
+                        sprite.enabled = true;
+                    }
 
-                curSpawn = spawnPoints[spawn].transform;
+                    int spawn;
 
-                enemyTransform.position = curSpawn.position;
+                    do
+                    {
+                        spawn = Random.Range(0, spawnPoints.Length);
+                    }
+                    while (spawn == prevSpawn);
 
-                curMoveTime = moveTime;
-                curStunTime = stunTime;
+                    if (spawnPoints[spawn].getVisible())
+                    {
+                        enemyCollider.enabled = false;
+                        sprite.enabled = false;
+                    }
+                    else
+                    {
+                        enemyCollider.enabled = true;
+                        sprite.enabled = true;
+                    }
 
+                        prevSpawn = spawn;
+
+                    curSpawn = spawnPoints[spawn].GetTransform();
+
+                    enemyTransform.position = curSpawn.position;
+
+                    curMoveTime = moveTime;
+                    curStunTime = stunTime;
+
+                }
+
+
+                timer.count(ref curMoveTime);
             }
+            else
+            {
+                timer.count(ref curFadeTime);
+                Color c = sprite.color;
+                c.a = curFadeTime / fadeTime;
+                //add running anim
+                if (curFadeTime <= 0f)
+                {
+                    c.a = 0f;
+                    anim = false; // stop fading when done
+                    curStunTime = stunTime;
+                    curMoveTime = 0;
+                    flashed = false;
+                    curHealth -= 1;
+                }
 
-
-            timer.count(ref curMoveTime);
+                sprite.color = c;
+            }
         }
         else
         {
-            Color c = sprite.color;
-            c.a -= fadeSpeed;
-            if (c.a <= 0f)
-            {
-                c.a = 0f;
-                anim = false; // stop fading when done
-                curStunTime = stunTime;
-                curMoveTime = 0;
-            }
-            
-            sprite.color = c;
-            
+            sprite.enabled = false;
+            //dead
         }
+        
         
     }
 
@@ -124,7 +153,7 @@ public class monsterScript : MonoBehaviour
             }
             
             
-            Debug.Log("gatcha bitch");
+            
         }
         
         
