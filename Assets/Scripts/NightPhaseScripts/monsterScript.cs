@@ -81,25 +81,14 @@ public class monsterScript : MonoBehaviour
                     }
 
                     int spawn;
-
                     do
                     {
                         spawn = Random.Range(0, spawnPoints.Length);
-                    }
-                    while (spawn == prevSpawn);
 
-                    if (spawnPoints[spawn].getVisible())
-                    {
-                        enemyCollider.enabled = false;
-                        sprite.enabled = false;
                     }
-                    else
-                    {
-                        enemyCollider.enabled = true;
-                        sprite.enabled = true;
-                    }
+                    while (spawn == prevSpawn || spawnPoints[spawn].getVisible());
 
-                        prevSpawn = spawn;
+                    prevSpawn = spawn;
 
                     curSpawn = spawnPoints[spawn].GetTransform();
 

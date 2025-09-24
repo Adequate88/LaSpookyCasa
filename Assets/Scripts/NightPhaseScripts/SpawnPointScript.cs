@@ -4,7 +4,12 @@ using UnityEngine;
 public class SpawnPointScript : MonoBehaviour
 {
 
-    private bool visible = false;
+    private bool visible;
+
+    private void Awake()
+    {
+        visible = false;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnTriggerEnter2D(Collider2D other)
