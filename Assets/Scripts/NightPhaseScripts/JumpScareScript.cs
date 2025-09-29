@@ -38,9 +38,10 @@ public class JumpScareScript : MonoBehaviour
 
         if (jumpScareTime <= 0)
         {
+            Play();
             torchScript.Disable();
             sprite.enabled = true;
-            Play();
+            
         }
     }
 
