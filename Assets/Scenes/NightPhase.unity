@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6932381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,11 +880,12 @@ MonoBehaviour:
   - {fileID: 316893705}
   - {fileID: 1377597655}
   - {fileID: 333683716}
-  moveTime: 10
+  moveTime: 2
   stunTime: 3
-  fadeTime: 2
+  fadeTime: 1
   startHealth: 3
-  hider: 0
+  hider: 1
+  skips: 0
 --- !u!61 &1947263750
 BoxCollider2D:
   m_ObjectHideFlags: 0

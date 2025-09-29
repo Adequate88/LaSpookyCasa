@@ -9,7 +9,11 @@ public class monsterScript : MonoBehaviour
     [SerializeField] private float stunTime;
     [SerializeField] private float fadeTime;
     [SerializeField] private int startHealth;
+
+    [Header("hider settings")]
     [SerializeField] private bool hider;
+    [SerializeField] private bool skips;
+
 
     private float curMoveTime;
     private float curFadeTime;
@@ -46,13 +50,12 @@ public class monsterScript : MonoBehaviour
 
     void Update()
     {
-        if (curHealth > 0 || killReady)
+        if (curHealth > 0 || !killReady)
         {
-            TorchCheck();
-
             if (!anim)
             {
-                
+                TorchCheck();
+
                 if (hider)
                 {
                     HidingBehaviourHandle();
@@ -89,6 +92,7 @@ public class monsterScript : MonoBehaviour
         if (curStunTime <= 0)
         {
             anim = true;
+            prevSpawn = hider ? 0 : prevSpawn;
         }
     }
 
@@ -129,47 +133,56 @@ public class monsterScript : MonoBehaviour
 
     private void HidingBehaviourHandle()
     {
-        // choose if visible
-        if ((Random.Range(0, 2) == 1) || isActive)
+        if (curMoveTime <= 0 && !flashed)
         {
-            enemyCollider.enabled = false;
-            sprite.enabled = false;
-            isActive = false;
-        }
-        else
-        {
-            enemyCollider.enabled = true;
-            sprite.enabled = true;
-            isActive = true;
-        }
-
-        int spawn = prevSpawn;
-
-        if (isActive)
-        {
-            if (prevSpawn == spawnPoints.Length)
+            // choose if visible
+            if ((Random.Range(0, 2) == 1) || isActive || spawnPoints[prevSpawn].getVisible())
             {
+                if (skips && spawnPoints[prevSpawn].getVisible() && prevSpawn < spawnPoints.Length - 1)
+                {
+                    prevSpawn += 1;
+                }
+
                 enemyCollider.enabled = false;
                 sprite.enabled = false;
                 isActive = false;
-                killReady = true;
             }
             else
             {
-                spawn += 1;
+                enemyCollider.enabled = true;
+                sprite.enabled = true;
+                isActive = true;
+            }
+
+            int spawn = prevSpawn;
+
+            prevSpawn = spawn;
+            curSpawn = spawnPoints[spawn].GetTransform();
+            enemyTransform.position = curSpawn.position;
+
+            curMoveTime = moveTime;
+            curStunTime = stunTime;
+
+            if (isActive)
+            {
+                if (prevSpawn == spawnPoints.Length - 1)
+                {
+                    killReady = true;
+                }
+                else
+                {
+                    prevSpawn += 1;
+                }
             }
         }
 
-        prevSpawn = spawn;
-        curSpawn = spawnPoints[spawn].GetTransform();
-        enemyTransform.position = curSpawn.position;
-
-        curMoveTime = moveTime;
-        curStunTime = stunTime;
+        timer.count(ref curMoveTime);
+       
     }
 
     private void HandleFadeAnimation()
     {
+        Debug.Log("eyp");
         timer.count(ref curFadeTime);
         Color c = sprite.color;
         c.a = curFadeTime / fadeTime;
