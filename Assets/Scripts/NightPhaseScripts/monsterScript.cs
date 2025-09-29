@@ -221,10 +221,15 @@ public class monsterScript : MonoBehaviour
         }
     }
 
-    public void ResetAlpha(SpriteRenderer sprite)
+    private void ResetAlpha(SpriteRenderer sprite)
     {
         Color c = sprite.color;
         c.a = 1f;
         sprite.color = c;
+    }
+
+    public bool getKill()
+    {
+        return killReady;
     }
 }

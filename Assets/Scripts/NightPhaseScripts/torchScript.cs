@@ -78,4 +78,9 @@ public class torchScript : MonoBehaviour
         
         return swOn;
     }
+
+    public void Disable()
+    {
+        gameObject.SetActive(false);
+    }
 }

@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\NightPhaseScripts\SpawnPointScript.cs" />
+    <Compile Include="Assets\Scripts\NightPhaseScripts\JumpScareScript.cs" />
     <Compile Include="Assets\Scripts\NightPhaseScripts\nightCamScript.cs" />
+    <Compile Include="Assets\Scripts\NightPhaseScripts\nightPhaseManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\NightPhaseScripts\timerScript.cs" />
     <Compile Include="Assets\inputActions.cs" />
