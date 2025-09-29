@@ -47,7 +47,13 @@
     <Analyzer Include="/home/adequate/Unity/Hub/Editor/6000.2.3f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/NightPhaseScripts/SpawnPointScript.cs" />
+    <Compile Include="Assets/Scripts/NightPhaseScripts/nightCamScript.cs" />
     <Compile Include="Assets/Scripts/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/NightPhaseScripts/timerScript.cs" />
+    <Compile Include="Assets/inputActions.cs" />
+    <Compile Include="Assets/Scripts/NightPhaseScripts/monsterScript.cs" />
+    <Compile Include="Assets/Scripts/NightPhaseScripts/torchScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Sprites/LICENSE.txt" />

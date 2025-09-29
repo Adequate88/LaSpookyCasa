@@ -61,7 +61,17 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+=======
+    <Compile Include="Assets\Scripts\NightPhaseScripts\SpawnPointScript.cs" />
+    <Compile Include="Assets\Scripts\NightPhaseScripts\nightCamScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\NightPhaseScripts\timerScript.cs" />
+    <Compile Include="Assets\inputActions.cs" />
+    <Compile Include="Assets\Scripts\NightPhaseScripts\monsterScript.cs" />
+    <Compile Include="Assets\Scripts\NightPhaseScripts\torchScript.cs" />
+>>>>>>> Alex-NIght-Work
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\LICENSE.txt" />
