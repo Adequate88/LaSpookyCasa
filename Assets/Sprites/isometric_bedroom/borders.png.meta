@@ -1,34 +1,10 @@
 fileFormatVersion: 2
-guid: 752274b96442b6cae968e1f9ec2ce798
+guid: bb865d8362c4144b7b3678f8a7da9f2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1207471113411644196
-    second: roomsprites_1_0
-  - first:
-      213: -8525172581098606948
-    second: roomsprites_1_1
-  - first:
-      213: -4590908133279519263
-    second: roomsprites_1_2
-  - first:
-      213: 2885502692956251055
-    second: roomsprites_1_3
-  - first:
-      213: 7298871697691515315
-    second: roomsprites_1_4
-  - first:
-      213: 3981215582080333272
-    second: roomsprites_1_5
-  - first:
-      213: 210383449980205847
-    second: roomsprites_1_6
-  - first:
-      213: -3953420061059382053
-    second: roomsprites_1_7
-  - first:
-      213: -2132779233807882606
-    second: roomsprites_1_8
+      213: -4603182780432533220
+    second: borders_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,199 +100,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: roomsprites_1_0
+      name: borders_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 63
-        width: 22
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd4bd887b633e3fe0800000000000000
-      internalID: -1207471113411644196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roomsprites_1_1
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 73
-        width: 20
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9ea7bea4b080b980800000000000000
-      internalID: -8525172581098606948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roomsprites_1_2
-      rect:
-        serializedVersion: 2
-        x: 70
+        x: 0
         y: 64
-        width: 20
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ed2c6f5061d940c0800000000000000
-      internalID: -4590908133279519263
+      spriteID: c19bf1066a53e10c0800000000000000
+      internalID: -4603182780432533220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roomsprites_1_3
+      name: borders_1
       rect:
         serializedVersion: 2
-        x: 9
-        y: 37
-        width: 14
-        height: 22
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fa32714496d5b0820800000000000000
-      internalID: 2885502692956251055
+      spriteID: a907dd11ef73960dab011351a0e388be
+      internalID: 1704147652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roomsprites_1_4
+      name: borders_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 39
-        width: 16
-        height: 18
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3b91e02532dca4560800000000000000
-      internalID: 7298871697691515315
+      spriteID: 14adb211d59c4688baeaf4516aabd9fb
+      internalID: -168055911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roomsprites_1_5
+      name: borders_3
       rect:
         serializedVersion: 2
-        x: 69
-        y: 41
-        width: 23
-        height: 14
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d5f5208a7e104730800000000000000
-      internalID: 3981215582080333272
+      spriteID: 6c68b20ffb79bae57b65ff6340295e46
+      internalID: -138054330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roomsprites_1_6
+      name: borders_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 10
-        width: 16
-        height: 12
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 71bf0b212ae6be200800000000000000
-      internalID: 210383449980205847
+      spriteID: 8e53458c235504ac3aae4c60d0d29fe4
+      internalID: -40057520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roomsprites_1_7
+      name: borders_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 1
-        width: 20
-        height: 31
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bd407ac8661a229c0800000000000000
-      internalID: -3953420061059382053
+      spriteID: f4aab6725528a4fedaafcfecab73ae94
+      internalID: -368388371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roomsprites_1_8
+      name: borders_6
       rect:
         serializedVersion: 2
-        x: 71
-        y: 8
-        width: 18
-        height: 16
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2962d883698d662e0800000000000000
-      internalID: -2132779233807882606
+      spriteID: a15d9a33011aa4886af0e41a2dba109b
+      internalID: 760514590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borders_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8bd74c353c2e916bcc008cf11bbec7
+      internalID: 1203794251
       vertices: []
       indices: 
       edges: []
@@ -325,7 +279,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1c10c81893560796586af0f9f25dfc7d
     internalID: 0
     vertices: []
     indices: 
@@ -333,17 +287,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      roomsprites_1_0: -1207471113411644196
-      roomsprites_1_1: -8525172581098606948
-      roomsprites_1_2: -4590908133279519263
-      roomsprites_1_3: 2885502692956251055
-      roomsprites_1_4: 7298871697691515315
-      roomsprites_1_5: 3981215582080333272
-      roomsprites_1_6: 210383449980205847
-      roomsprites_1_7: -3953420061059382053
-      roomsprites_1_8: -2132779233807882606
+      borders_0: -4603182780432533220
+      borders_1: 1704147652
+      borders_2: -168055911
+      borders_3: -138054330
+      borders_4: -40057520
+      borders_5: -368388371
+      borders_6: 760514590
+      borders_7: 1203794251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
