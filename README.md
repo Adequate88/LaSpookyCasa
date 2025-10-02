@@ -3,6 +3,19 @@
 - Studio Name: Triple A
 - Genre: Horror + ?
 
+## ToDo List (Updated 02/10/25)
+
+- Note Logic
+- Warped View
+- Torch Battery
+- Music
+- SFX
+- First Monster
+- Images for Interactables
+- Use existing sprites to create childs room
+- Create boy sprite + animations
+
+
 ## Abstract of Where We're At (Updated 08/09/25)
 
 The user is plays a character moving into a new house/studio. This house is run by an artificial intelligence, which at first seems friendly - but, unbeknownst to the user, the house is attempting to assimilate them into a robot (or potentially some alternative threat).
