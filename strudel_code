@@ -1,0 +1,70 @@
+
+// Ambient horror soundtrack (original composition, inspired by eerie retro game moods)
+// Works on base Strudel REPL (https://strudel.cc/) — no undeclared variables.
+
+// Tempo (cycles per minute)
+setcpm(36)  // slow pacing for atmosphere
+
+
+// (1) Sub drone / low bed
+$: note("c1*6")
+  .sound("sine")
+  .gain(1)
+  .lpf( sine.slow(1.5).range(200, 2000) )
+  .room(0.65)
+  .clip(0.8)
+  .slow(4)
+
+$: note("<[f5@0.09 ~ f5@0.02 gb5@0.11 ~ gb5@0.02 ab5@0.07 ~ ab5@0.02 bb5@0.13 c6@0.03 ~ db6@0.09]>")
+  .sound("crow")
+  .gain(0.5)
+  .hpf("<300 600 500>")
+  .delay(0.4)
+  .delaytime("<0.25 0.5 0.75 0.33>")
+  .delayfeedback(0.48)
+  .room(0.4)
+  .pan("<-0.3 0.3>")
+  .slow(4)
+
+// (3) Sparse metallic plucks (haunting high notes)
+$: note("~ <g5 ~ e5> ~ <bb5 ~ a5> ~ <g5 ~>")
+  .sound("casio")
+  .gain(0.18)
+  .speed("<1 0.99 1 1.01>")
+  .room(0.9)
+  .delay(0.5)
+  .delaytime("<0.5 0.75 0.25 0.375>")
+  .delayfeedback(0.6)
+  .clip(0.9)
+  .pan("<0.4 -0.4 0.2 -0.2>")
+  .slow(1)
+
+// (4) Sparse heartbeat / pulse
+$: s("~ ~ [bd ~ bd] ~")
+  .bank("RolandTR909")
+  .gain(0.15)
+  .lpf(200)
+  .room(0.25)
+  .delay(0.25)
+  .delaytime(0.5)
+  .delayfeedback(0.12)
+
+// (5) Textural ticks / noise
+$: note("c7*32")
+  .sound("sine")
+  .gain(0.015)
+  .speed(8)   // make it very short/clicky
+  .pan("<-0.6 0.6>")
+  .room(0.15)
+  .slow(8)
+
+// (6) Micro-melody generator
+$: note("<[e4 ~ g4]*4 [d4 ~ f4]*4>")
+  .sound("sine")
+  .gain(0.25)
+  .lpf("<1200 800 900 700>")
+  .pan("<-0.2 0.2>")
+  .delay(0.42)
+  .delayfeedback(0.38)
+  .room(0.65)
+  .slow(2)
