@@ -9,9 +9,13 @@ public class torchScript : MonoBehaviour
     private Light2D light;
     private InputActions inputActions;
     private CircleCollider2D circleCollider;
+    private timerScript timer;
+
+    [SerializeField] float TorchHealth;
 
     private bool switchOn;
     private bool switchPressed;
+    private float curTorchHealth;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +27,8 @@ public class torchScript : MonoBehaviour
         inputActions.Enable();
         switchOn = false;
         switchPressed = false;
+        curTorchHealth = TorchHealth;
+        timer = new timerScript();
     }
 
     // Update is called once per frame
@@ -38,7 +44,7 @@ public class torchScript : MonoBehaviour
 
         switchOn = switchCheck(switchOn, ref switchPressed, torchButtonInput);
 
-        if (switchOn)
+        if (switchOn && !(curTorchHealth <= 0))
         {
             light.intensity = 2;
             circleCollider.enabled = true;
@@ -51,6 +57,14 @@ public class torchScript : MonoBehaviour
 
         torchTransform.position = worldPos;
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (switchOn)
+        {
+            timer.count(ref curTorchHealth);
+        }
     }
 
     private bool switchCheck(bool swOn, ref bool swPr, bool pressing)
@@ -82,5 +96,15 @@ public class torchScript : MonoBehaviour
     public void Disable()
     {
         gameObject.SetActive(false);
+    }
+
+    public float getTorchHealth()
+    {
+        return curTorchHealth;
+    } 
+
+    public float getTorchMax()
+    {
+        return TorchHealth;
     }
 }

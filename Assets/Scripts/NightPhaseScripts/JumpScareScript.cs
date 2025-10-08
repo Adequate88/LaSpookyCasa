@@ -23,7 +23,7 @@ public class JumpScareScript : MonoBehaviour
         timerScript = new timerScript();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.position = camera.position;
         

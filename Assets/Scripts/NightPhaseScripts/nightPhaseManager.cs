@@ -8,11 +8,12 @@ public class nightPhaseManager : MonoBehaviour
     
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (monsterScript.getKill())
         {
             jumpScare.Scare();
         }
     }
+
 }

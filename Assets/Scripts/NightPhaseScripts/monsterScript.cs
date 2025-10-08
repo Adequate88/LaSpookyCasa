@@ -48,9 +48,11 @@ public class monsterScript : MonoBehaviour
         curHealth = startHealth;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (curHealth > 0 || !killReady)
+        Debug.Log(curHealth);
+
+        if ((curHealth > 0) && !killReady)
         {
             if (!anim)
             {
@@ -133,7 +135,7 @@ public class monsterScript : MonoBehaviour
 
     private void HidingBehaviourHandle()
     {
-        if (curMoveTime <= 0 && !flashed)
+        if (curMoveTime <= 0 && !flashed && prevSpawn < spawnPoints.Length)
         {
             // choose if visible
             if ((Random.Range(0, 2) == 1) || isActive || spawnPoints[prevSpawn].getVisible())
@@ -165,18 +167,17 @@ public class monsterScript : MonoBehaviour
 
             if (isActive)
             {
-                if (prevSpawn == spawnPoints.Length - 1)
-                {
-                    killReady = true;
-                }
-                else
-                {
                     prevSpawn += 1;
-                }
             }
         }
+        else if (prevSpawn == spawnPoints.Length && curMoveTime <= 0)
+        {
+            enemyCollider.enabled = false;
+            sprite.enabled = false;
+            killReady = true;
+        }
 
-        timer.count(ref curMoveTime);
+            timer.count(ref curMoveTime);
        
     }
 
@@ -231,5 +232,10 @@ public class monsterScript : MonoBehaviour
     public bool getKill()
     {
         return killReady;
+    }
+
+    public bool getHider()
+    {
+        return hider;
     }
 }
