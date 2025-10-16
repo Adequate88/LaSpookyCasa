@@ -154,3 +154,60 @@ The rabbit is a playful monster. It likes to play games and tease the boy.
 ## Monster 3: Stitched (plushy) cat in the kitchen (?)
 
 The cat is a 'sassy' and entitled monster. Just like a cat it believes that it is the center of the universe. It doesn't like making things easy for the player. It actively sabotages the player and, because its a cat, doesn't respect boundaries. Therefore, it is able to wander into any of the rooms ontop of the kitchen.
+
+# Differences for Images
+
+## Carpet
+
+1. Car headlights are on and faint glow
+2. Plane changes color to match monster theme
+3. Bunny Footprint
+4. Flower changes to Eye or Face
+5. Duck has bleeding eyes
+6. Ball is melted
+
+## Bookcase
+
+1. Spine of a book has nonsense symbols
+2. Eye peeking through camera lens
+3. Shadow of monster appears behind books
+4. New book on the shelf (spooky theme)
+5. Dinosaur now looks at camera with creep smile
+6. Something is missing
+
+## Chest
+
+1. Bunny becomes monster and stares at camera creepily
+2. Blood dripping from keyhole
+3. Handprint on the ball
+4. Cover of book changes
+5. Smile of bear is creepier
+6. Something is on the bed in the back
+
+## Desk
+
+1. Dinosaur has empty eye sockets
+2. Toys on desk are decapitated
+3. Blood dripping from hard drive spot
+4. Mouse is gone
+5. Shadow of monster seen in the back
+6. Pencils appear burnt and broken
+
+## Wardrobe
+
+1. Replace shirt with stuffed bear hung by a noose
+2. Bag is slightly opened with eyes peeking out
+3. Ball is deflated
+4. One shirt is ripped up
+5. Handprint/Smudge on wardrobe
+6. The books turn into a picture frame of the monster
+
+## Pinboard
+
+1. Color of paper is now monster themed
+2. A flipped upside down
+3. Star is gone
+4. Monster now drawn into the rocket window
+5. Bottom paper torn in half
+6. Writing on the paper
+
