@@ -22,6 +22,7 @@ public class monsterScript : MonoBehaviour
     private bool anim;
     private bool isActive;
     private bool killReady;
+    private bool isAwake;
 
     private int curHealth;
 
@@ -46,13 +47,14 @@ public class monsterScript : MonoBehaviour
         killReady = false;
         anim = false;
         curHealth = startHealth;
+        isAwake = false;
     }
 
     void FixedUpdate()
     {
         Debug.Log(curHealth);
 
-        if ((curHealth > 0) && !killReady)
+        if ((curHealth > 0) && !killReady && isAwake)
         {
             if (!anim)
             {
@@ -237,5 +239,20 @@ public class monsterScript : MonoBehaviour
     public bool getHider()
     {
         return hider;
+    }
+
+    public void setAwake()
+    {
+        isAwake = true;
+    }
+
+    public void setKill()
+    {
+        killReady = true;
+    }
+
+    public bool getAlive()
+    {
+        return curHealth > 0;
     }
 }

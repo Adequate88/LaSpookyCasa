@@ -29,6 +29,7 @@ public class torchScript : MonoBehaviour
         switchPressed = false;
         curTorchHealth = TorchHealth;
         timer = new timerScript();
+
     }
 
     // Update is called once per frame
@@ -106,5 +107,10 @@ public class torchScript : MonoBehaviour
     public float getTorchMax()
     {
         return TorchHealth;
+    }
+
+    public void killTorch()
+    {
+        curTorchHealth = 0;
     }
 }

@@ -109,6 +109,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sleep"",
+                    ""type"": ""Button"",
+                    ""id"": ""b8657d27-15e2-4bbf-b311-21b0d428bb99"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -133,6 +142,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Torch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a25c1f1f-254c-4390-8e8a-e95134f7c65e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sleep"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +163,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerNight = asset.FindActionMap("PlayerNight", throwIfNotFound: true);
         m_PlayerNight_Look = m_PlayerNight.FindAction("Look", throwIfNotFound: true);
         m_PlayerNight_Torch = m_PlayerNight.FindAction("Torch", throwIfNotFound: true);
+        m_PlayerNight_Sleep = m_PlayerNight.FindAction("Sleep", throwIfNotFound: true);
     }
 
     ~@InputActions()
@@ -225,6 +246,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private List<IPlayerNightActions> m_PlayerNightActionsCallbackInterfaces = new List<IPlayerNightActions>();
     private readonly InputAction m_PlayerNight_Look;
     private readonly InputAction m_PlayerNight_Torch;
+    private readonly InputAction m_PlayerNight_Sleep;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerNight".
     /// </summary>
@@ -244,6 +266,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerNight/Torch".
         /// </summary>
         public InputAction @Torch => m_Wrapper.m_PlayerNight_Torch;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerNight/Sleep".
+        /// </summary>
+        public InputAction @Sleep => m_Wrapper.m_PlayerNight_Sleep;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -276,6 +302,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Torch.started += instance.OnTorch;
             @Torch.performed += instance.OnTorch;
             @Torch.canceled += instance.OnTorch;
+            @Sleep.started += instance.OnSleep;
+            @Sleep.performed += instance.OnSleep;
+            @Sleep.canceled += instance.OnSleep;
         }
 
         /// <summary>
@@ -293,6 +322,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Torch.started -= instance.OnTorch;
             @Torch.performed -= instance.OnTorch;
             @Torch.canceled -= instance.OnTorch;
+            @Sleep.started -= instance.OnSleep;
+            @Sleep.performed -= instance.OnSleep;
+            @Sleep.canceled -= instance.OnSleep;
         }
 
         /// <summary>
@@ -347,5 +379,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTorch(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Sleep" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSleep(InputAction.CallbackContext context);
     }
 }
