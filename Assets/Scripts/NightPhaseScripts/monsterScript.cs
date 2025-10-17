@@ -9,6 +9,7 @@ public class monsterScript : MonoBehaviour
     [SerializeField] private float stunTime;
     [SerializeField] private float fadeTime;
     [SerializeField] private int startHealth;
+    [SerializeField] private int appearanceUnLikelyhood = 2;
 
     [Header("hider settings")]
     [SerializeField] private bool hider;
@@ -106,7 +107,7 @@ public class monsterScript : MonoBehaviour
         if (curMoveTime <= 0 && !flashed)
         {
             // choose if visible
-            if (Random.Range(0, 2) == 1)
+            if (Random.Range(0, appearanceUnLikelyhood) == 1)
             {
                 enemyCollider.enabled = false;
                 sprite.enabled = false;
@@ -139,13 +140,11 @@ public class monsterScript : MonoBehaviour
     {
         if (curMoveTime <= 0 && !flashed && prevSpawn < spawnPoints.Length)
         {
+            int rando = (Random.Range(0, appearanceUnLikelyhood));
             // choose if visible
-            if ((Random.Range(0, 2) == 1) || isActive || spawnPoints[prevSpawn].getVisible())
+            if ( rando != 1 || isActive)
             {
-                if (skips && spawnPoints[prevSpawn].getVisible() && prevSpawn < spawnPoints.Length - 1)
-                {
-                    prevSpawn += 1;
-                }
+             
 
                 enemyCollider.enabled = false;
                 sprite.enabled = false;
@@ -153,9 +152,16 @@ public class monsterScript : MonoBehaviour
             }
             else
             {
-                enemyCollider.enabled = true;
-                sprite.enabled = true;
-                isActive = true;
+                if (skips && spawnPoints[prevSpawn].getVisible() && prevSpawn < spawnPoints.Length - 1)
+                {
+                    prevSpawn += 1;
+                }
+                else
+                {
+                    enemyCollider.enabled = true;
+                    sprite.enabled = true;
+                    isActive = true;
+                }  
             }
 
             int spawn = prevSpawn;
