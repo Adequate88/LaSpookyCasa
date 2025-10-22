@@ -44,11 +44,14 @@ TagManager:
   - name: Background
     uniqueID: 982332711
     locked: 0
+  - name: Foreground
+    uniqueID: 93613355
+    locked: 0
   - name: Player
     uniqueID: 3883803379
     locked: 0
-  - name: Foreground
-    uniqueID: 93613355
+  - name: Lastground
+    uniqueID: 560913587
     locked: 0
   m_RenderingLayers:
   - Default

@@ -1,0 +1,120 @@
+
+// ============================
+// Ambient Horror Soundtrack
+// Extended + harmonic foundation
+// Works on base Strudel REPL (https://strudel.cc/)
+// ============================
+
+// Global tempo
+setcpm(36) // slow atmospheric pacing
+
+// (2) Eerie upper melodic layer (original)
+$: note("<[f5@0.09 ~ f5@0.02 gb5@0.11 ~ gb5@0.02 ab5@0.07 ~ ab5@0.02 bb5@0.13 c6@0.03 ~ db6@0.09]>")
+  .sound("metal")
+  .gain(0.4)
+  .hpf("<300 600 500>")
+  .delay(0.4)
+  .delaytime("<0.25 0.5 0.75 0.33>")
+  .delayfeedback(0.48)
+  .room(0.4)
+  .pan("<-0.3 0.3>")
+  .slow(4)
+
+// (4) Sparse heartbeat / pulse
+$: s("<~ ~ [bd ~ bd] ~>*4")
+  .bank("RolandTR909")
+  .gain("<0.45>")
+  .lpf(200)
+  .room(0.25)
+  .delay(0.25)
+  .delaytime(0.5)
+  .delayfeedback(0.12)
+
+// (5) Textural ticks / high-frequency noise
+$: note("c7*32")
+  .sound("sine")
+  .gain(0.004)
+  .speed(8)
+  .pan("<-0.6 0.6>")
+  .room(0.15)
+  .slow(8)
+
+$: note(`<
+  [c4 ~ g4] [c4 ~ gb4] [db4 ~ ab4] [db4 ~ ab4] ~
+  [f#4 ~ db5] [f4 ~ db5] [eb4 ~ b4] [eb4 ~ bb4]
+>*2`)
+  .sound("gm_glockenspiel")
+  .gain("<0.6 0.0>/4.5")
+  .lpf("<900 800 850 750>")
+  .delay(0.45)
+  .delayfeedback(0.35)
+  .room(0.7)
+
+$: note(`<
+  [c4 ~ g4] [c4 ~ gb4] [db4 ~ ab4] [db4 ~ ab4] [~ ~ db4]
+  [f#4 f4*2 db5] [c4*2 f#4 db5] [eb4 ~ b4] [eb4 ~ bb4]
+>*2`)
+  .sound("gm_glockenspiel")
+  .gain("<0.0 0.6>/4.5")
+  .lpf("<900 800 850 750>")
+  .delay(0.45)
+  .delayfeedback(0.35)
+  .room(0.7)
+
+$: note(`<
+  [c3,eb3,gb3] [~ c3,eb3,gb3] [db3,f3,ab3] [db3,f3,ab3] ~
+  [f3,ab3,db4] [~ f3,ab3,db4] [eb3,gb3,b3] [~ eb3,gb3,b3]
+>*2`)
+  .sound("square")
+  .gain("<0.2>")
+  .lpf(sine.slow(4).range(300, 700))
+  .room(1)
+  .delay(0.6)
+  .delaytime("<0.25 0.5>")
+  .delayfeedback(0.3)
+  .clip(0.7)
+
+// =======================================
+// (7) NEW SECTION: Ambient chord progression
+// =======================================
+// Adds emotional harmonic motion. Each chord lasts long enough to feel immersive.
+// Slightly detuned sine pad with moving filter + pan for evolving depth.
+
+// (7-alt) Slightly darker, more dissonant chord progression — lower octave version
+// Keeps original harmonic motion but adds tension through altered tones and semitone clashes.
+
+$: note(`<[c2 ~ gb2] [c2 ~ gb2] [db2 ~ ab2] [db2 ~ ab2] [~ ab2 db3]
+  [f#2 ~ db3] [f2 ~ db3] [eb2 ~ b2] [eb2 ~ bb2]>*2`)
+  .sound("sine")
+  .gain("<0.7 0.0>/4.5")
+  .lpf(sine.slow(2).range(350, 1500))
+  .room(0.85)
+  .delay(0.4)
+  .delaytime("<0.5 0.75>")
+  .delayfeedback(0.45)
+  .clip(0.9)
+
+$: note(`<
+  [c2 ~ g2] [c2 ~ gb2] [db2 ~ ab2] [db2 ~ ab2] [~ ~ ~]
+  [f#2 f2*2 db3] [c2*2 f#2 db3] [eb2 ~ b2] [eb2 ~ bb2]
+>*2`)
+  .sound("sine")
+  .gain("<0.0 0.7>/4.5")
+  .lpf(sine.slow(2).range(350, 1500))
+  .room(0.85)
+  .delay(0.4)
+  .delaytime("<0.5 0.75>")
+  .delayfeedback(0.45)
+  .clip(0.9)
+
+$: note(`<
+  [~ ~ ~] [~ ~ ~] [~ ~ ~] [~ ~ ~] [~ f#2*32 ~]
+  [~ ~*2 ~] [~*2 ~ ~] [~ ~ ~] [~ ~ ~]
+>*2`)
+  .s("sawtooth")
+  .speed(rand.range(0.1, 8))
+  .crush(rand.range(1, 32))
+  .loopAt(0.125)
+  .slow(8)
+  .gain(0.7)
+  .someCyclesBy(0.5, _ => _.gain(0))
