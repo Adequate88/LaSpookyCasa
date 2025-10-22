@@ -146,14 +146,15 @@ public class JumpScareScript : MonoBehaviour
 
     private void Play()
     {
-        if (animator != null)
-        {
-            animator.SetTrigger(triggerName);
-        }
-
         if (audioSource != null && clip != null)
         {
             audioSource.PlayOneShot(clip);
+        }
+
+
+        if (animator != null)
+        {
+            animator.SetTrigger(triggerName);
         }
     }
 }
