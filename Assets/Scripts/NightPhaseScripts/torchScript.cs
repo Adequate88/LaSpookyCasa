@@ -12,6 +12,9 @@ public class torchScript : MonoBehaviour
     private timerScript timer;
 
     [SerializeField] float TorchHealth;
+    [SerializeField] AudioSource sfxOn;
+    [SerializeField] AudioSource sfxOff;
+    [SerializeField] AudioSource sfxHum;
 
     private bool switchOn;
     private bool switchPressed;
@@ -82,11 +85,15 @@ public class torchScript : MonoBehaviour
             if (!swOn && pressing)
             {
                 swPr = true;
+                sfxOn.Play();
+                sfxHum.Play();
                 return true;
             }
             else if (swOn && pressing)
             {
                 swPr = true;
+                sfxOff.Play();
+                sfxHum.Stop();
                 return false;
             }
         }
@@ -96,6 +103,7 @@ public class torchScript : MonoBehaviour
 
     public void Disable()
     {
+        if (sfxHum.isPlaying) sfxHum.Stop();
         gameObject.SetActive(false);
     }
 

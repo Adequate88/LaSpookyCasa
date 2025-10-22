@@ -79,6 +79,7 @@ public class JumpScareScript : MonoBehaviour
     [SerializeField] private Transform camera;
     [SerializeField] private torchScript torchScript;
 
+    [SerializeField] AudioSource sfxBackground;
     private AudioSource audioSource;
     private bool active;
     private float jumpScareTime;
@@ -132,6 +133,7 @@ public class JumpScareScript : MonoBehaviour
             {
                 sprite.enabled = false;
                 audioSource.Stop();
+                sfxBackground.Stop();
 
                 // Reset jump scare timer
                 jumpScareTime = Random.Range(1, maxScareTime);
@@ -149,6 +151,7 @@ public class JumpScareScript : MonoBehaviour
         if (audioSource != null && clip != null)
         {
             audioSource.PlayOneShot(clip);
+            sfxBackground.Play();
         }
 
 

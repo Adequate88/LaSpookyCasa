@@ -6,8 +6,10 @@ public class nightPhaseManager : MonoBehaviour
     [SerializeField] private monsterScript monsterScript;
     [SerializeField] private sleepScreen sleepingScreen;
     [SerializeField] private torchScript torchScript;
-    [SerializeField] private float sleepTimeInput; 
+    [SerializeField] private float sleepTimeInput;
 
+
+    [SerializeField] AudioSource sfxAmbient;
     private InputActions inputActions;
     private float curSleepTimeInput;
     private timerScript timer;
@@ -43,6 +45,7 @@ public class nightPhaseManager : MonoBehaviour
                 timer.count(ref curSleepTimeInput);
                 if (curSleepTimeInput <= 0)
                 {
+                    sfxAmbient.Stop();
                     sleeping = true;
                     sleepingScreen.setSleep();
                     torchScript.killTorch();
