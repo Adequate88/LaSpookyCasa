@@ -6,6 +6,10 @@ public class Interactable : MonoBehaviour
     public TextMeshProUGUI interactText;
     public GameObject imageToShow;
 
+    [SerializeField] AudioSource sfxEnter;
+    [SerializeField] AudioSource sfxExit;
+
+
     private bool playerOnRange;
 
     void Start()
@@ -18,6 +22,14 @@ public class Interactable : MonoBehaviour
     {
         if (playerOnRange && Input.GetKeyDown(KeyCode.E))
         {
+            if (!imageToShow.activeSelf)
+            {
+                sfxEnter.Play();
+            }
+            else
+            {
+                sfxExit.Play();
+            }
             imageToShow.SetActive(!imageToShow.activeSelf);
         }
     }
