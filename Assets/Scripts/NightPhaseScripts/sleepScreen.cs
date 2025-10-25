@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 
 public class sleepScreen : MonoBehaviour
 {
 
     [SerializeField] private float fadeTime;
+    [SerializeField] TextMeshProUGUI introText;
     private SpriteRenderer sprite;
     private float curFadeTime;
     private timerScript timer;
@@ -19,6 +21,9 @@ public class sleepScreen : MonoBehaviour
         Color c = sprite.color;
         c.a = 1;
         sprite.color = c;
+        Color intro = introText.color;
+        intro.a = 0f;
+        introText.color = intro;
     }
 
     // Update is called once per frame
@@ -33,9 +38,14 @@ public class sleepScreen : MonoBehaviour
         if (intro && curFadeTime > 0)
         {
             timer.count(ref curFadeTime);
+
             Color c = sprite.color;
             c.a = curFadeTime / fadeTime;
             sprite.color = c;
+
+            Color intro = introText.color;
+            intro.a = (1 - curFadeTime / fadeTime) * 0.2f;
+            introText.color = intro;
         }
         else
         {
