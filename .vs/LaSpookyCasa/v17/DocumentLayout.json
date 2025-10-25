@@ -1,54 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\",
+  "WorkspaceRootPath": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|c:\\users\\20222535\\documents\\masters uu\\year1\\p1\\ai gen\\spookycasa\\laspookycasa\\assets\\scripts\\nightphasescripts\\transitiontestscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\transitiontestscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|c:\\users\\angelo\\desktop\\angelo\\utrecht\\period1\\ai\\project\\laspookycasa\\assets\\scenes\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scenes\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\nightsetupscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\nightsetupscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|c:\\users\\20222535\\documents\\masters uu\\year1\\p1\\ai gen\\spookycasa\\laspookycasa\\assets\\scripts\\nightphasescripts\\testbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\testbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\nightphasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\nightphasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\monsterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\monsterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\torchscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\torchscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\torchhandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\torchhandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\jumpscarescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|c:\\users\\angelo\\desktop\\angelo\\utrecht\\period1\\ai\\project\\laspookycasa\\assets\\scripts\\nightphasescripts\\jumpscarescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\jumpscarescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\nightcamscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\monsterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\monsterscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\nightphasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\nightphasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\torchscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\torchscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\nightcamscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\nightcamscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\sleepbarscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\sleepbarscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\sleepscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\sleepscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\sleepscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\assets\\scripts\\nightphasescripts\\torchhandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4038B167-A708-78FD-36E7-761B9E0F8D0D}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\nightphasescripts\\torchhandscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,80 +46,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestButton.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\TestButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\TestButton.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\TestButton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\TestButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T10:54:29.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TransitionTestScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\TransitionTestScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\TransitionTestScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\TransitionTestScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\TransitionTestScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "MainMenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scenes\\MainMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\MainMenuManager.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scenes\\MainMenuManager.cs",
+              "RelativeToolTip": "Assets\\Scenes\\MainMenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T10:49:20.058Z",
+              "WhenOpened": "2025-10-25T09:43:51.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NightSetupScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\NightSetupScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\NightSetupScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\NightSetupScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\NightSetupScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T17:00:20.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SleepBarScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\SleepBarScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\SleepBarScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\SleepBarScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\SleepBarScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T15:40:48.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "sleepScreen.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\sleepScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\sleepScreen.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\sleepScreen.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\sleepScreen.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\sleepScreen.cs",
               "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\sleepScreen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwBwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T09:20:20.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "torchHandScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchHandScript.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchHandScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\torchHandScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchHandScript.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchHandScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\torchHandScript.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAcwFkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T19:41:40.565Z"
             },
@@ -139,72 +89,72 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "nightPhaseManager.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightPhaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightPhaseManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\nightPhaseManager.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightPhaseManager.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightPhaseManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\nightPhaseManager.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAcwHYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwC8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T14:00:02.927Z",
+              "WhenOpened": "2025-09-29T14:00:02.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JumpScareScript.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAkwKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T13:41:44.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "JumpScareScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\JumpScareScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "nightCamScript.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwDIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T13:41:44.378Z"
+              "WhenOpened": "2025-09-29T09:52:17.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "nightCamScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\nightCamScript.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAQAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "torchScript.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAmwHIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T09:50:25.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "monsterScript.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T09:52:17.891Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "torchScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\torchScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T09:50:25.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "monsterScript.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NightPhaseScripts\\monsterScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T09:52:17.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\20222535\\Documents\\MASTERS UU\\Year1\\p1\\AI gen\\spookyCasa\\LaSpookyCasa\\Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Angelo\\Desktop\\Angelo\\Utrecht\\Period1\\AI\\Project\\LaSpookyCasa\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA0wCoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwCoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T09:48:37.438Z"
             }
