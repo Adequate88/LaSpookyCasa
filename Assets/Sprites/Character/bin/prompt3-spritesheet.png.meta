@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: bbbc887c1c6dc0f40b35a0b0b4880c32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -831226260465136459
+    second: prompt3-spritesheet_0
+  - first:
+      213: 7743458639747548707
+    second: prompt3-spritesheet_1
+  - first:
+      213: -482659246602001799
+    second: prompt3-spritesheet_2
+  - first:
+      213: -8219936345130520696
+    second: prompt3-spritesheet_3
+  - first:
+      213: -4697950857171931258
+    second: prompt3-spritesheet_4
+  - first:
+      213: -8459105743719378063
+    second: prompt3-spritesheet_5
+  - first:
+      213: 4196008637094928717
+    second: prompt3-spritesheet_6
+  - first:
+      213: 5579080437139666257
+    second: prompt3-spritesheet_7
+  - first:
+      213: 3538880957134873050
+    second: prompt3-spritesheet_8
+  - first:
+      213: -8786095637092097104
+    second: prompt3-spritesheet_9
+  - first:
+      213: 1006045118089346680
+    second: prompt3-spritesheet_10
+  - first:
+      213: -737722454221279312
+    second: prompt3-spritesheet_11
+  - first:
+      213: 3904035106169498120
+    second: prompt3-spritesheet_12
+  - first:
+      213: 8926892420067607642
+    second: prompt3-spritesheet_13
+  - first:
+      213: 8126679400965084761
+    second: prompt3-spritesheet_14
+  - first:
+      213: -7617589240611198949
+    second: prompt3-spritesheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: prompt3-spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 148
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bccff0ce14e674f0800000000000000
+      internalID: -831226260465136459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 147
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32605133b9a467b60800000000000000
+      internalID: 7743458639747548707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 148
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972eab2f8ff3d49f0800000000000000
+      internalID: -482659246602001799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 147
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f2c28f17beced80800000000000000
+      internalID: -8219936345130520696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 100
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f660216968dceb0800000000000000
+      internalID: -4697950857171931258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 99
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173d324f4283b9a80800000000000000
+      internalID: -8459105743719378063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 100
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41a380cf973b3a30800000000000000
+      internalID: 4196008637094928717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 100
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1557a0d2910ec6d40800000000000000
+      internalID: 5579080437139666257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 52
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad12b601b71ac1130800000000000000
+      internalID: 3538880957134873050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 51
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3248c9194811680800000000000000
+      internalID: -8786095637092097104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 52
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e3bb364b036fd00800000000000000
+      internalID: 1006045118089346680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 51
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bfaf45265513c5f0800000000000000
+      internalID: -737722454221279312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 4
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a23ed9e3bed2630800000000000000
+      internalID: 3904035106169498120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 3
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54c14efb51b2eb70800000000000000
+      internalID: 8926892420067607642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 4
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9561202bbd3c7c070800000000000000
+      internalID: 8126679400965084761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prompt3-spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 4
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18288402f2e84690800000000000000
+      internalID: -7617589240611198949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      prompt3-spritesheet_0: -831226260465136459
+      prompt3-spritesheet_1: 7743458639747548707
+      prompt3-spritesheet_10: 1006045118089346680
+      prompt3-spritesheet_11: -737722454221279312
+      prompt3-spritesheet_12: 3904035106169498120
+      prompt3-spritesheet_13: 8926892420067607642
+      prompt3-spritesheet_14: 8126679400965084761
+      prompt3-spritesheet_15: -7617589240611198949
+      prompt3-spritesheet_2: -482659246602001799
+      prompt3-spritesheet_3: -8219936345130520696
+      prompt3-spritesheet_4: -4697950857171931258
+      prompt3-spritesheet_5: -8459105743719378063
+      prompt3-spritesheet_6: 4196008637094928717
+      prompt3-spritesheet_7: 5579080437139666257
+      prompt3-spritesheet_8: 3538880957134873050
+      prompt3-spritesheet_9: -8786095637092097104
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
