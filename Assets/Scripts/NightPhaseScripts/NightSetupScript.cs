@@ -14,6 +14,13 @@ public class NightSetupManager : MonoBehaviour
     [Header("Torch Settings")]
     public float torchHealth;
 
+    [Header("Extra Setup Variables")]
+    public int[] MaxStartHealth = new int[3];
+    public float[] moveTimesNight = new float[3];
+    public int[] appearnceProbsNight = new int[3];
+    public int day = 0;
+    public bool completed = false;
+
     private void Awake()
     {
         // Singleton pattern so only one survives between scenes

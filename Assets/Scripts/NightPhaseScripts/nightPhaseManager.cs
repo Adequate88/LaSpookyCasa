@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class nightPhaseManager : MonoBehaviour
 {
@@ -96,7 +97,31 @@ public class nightPhaseManager : MonoBehaviour
             if (outroTime <= 0)
             {
                 //Do scene transfer here
-                Debug.Log("Switch Scene bitch");
+                NightSetupManager setup = NightSetupManager.Instance;
+
+                if (!monsterScript.getAlive())
+                {
+                    if (setup.day == 3)
+                    {
+                        setup.completed = true;
+                        //load ending.
+                        Debug.Log("Holy Schmoly dog");
+                    }
+                    else
+                    {
+                        setup.day += 1;
+                        SceneManager.LoadScene("SampleScene");
+                    }
+
+                    
+                }
+                else
+                {
+                    //Game over
+                    SceneManager.LoadScene("GameOverMenu");
+                }
+
+                    Debug.Log("Switch Scene bitch");
             }
         }
 

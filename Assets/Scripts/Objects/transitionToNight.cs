@@ -5,11 +5,15 @@ public class transitionToNight : MonoBehaviour
 {
 
     [SerializeField] GameObject fadeHandler;
+    DifferenceTracker diffTracker;
+    
+
     private bool playerOnRange;
 
     void Start()
     {
         fadeHandler.SetActive(false);
+        diffTracker = FindAnyObjectByType<DifferenceTracker>();
     }
 
     void Update()
@@ -17,7 +21,8 @@ public class transitionToNight : MonoBehaviour
         if (playerOnRange && Input.GetKeyDown(KeyCode.E))
         {   
             fadeHandler.SetActive(true);
-            FindObjectOfType<fadeTransition>().FadeToScene("Transition Test Scene");
+            prepareNight( diffTracker.getRemainingActiveDifferences(), diffTracker.getInitialDif(), NightSetupManager.Instance);
+            FindObjectOfType<fadeTransition>().FadeToScene("NightPhase");
         }
     }
 
@@ -36,5 +41,13 @@ public class transitionToNight : MonoBehaviour
         {
             playerOnRange = false;
         }
+    }
+
+    private void prepareNight(int remaining, int total, NightSetupManager setup)
+    {
+        setup.startHealth = setup.MaxStartHealth[setup.day] - (total - remaining);
+        setup.moveTime = setup.moveTimesNight[setup.day - 1];
+        setup.appearanceUnLikelyhood = setup.appearnceProbsNight[setup.day - 1];
+        setup.skips = true;
     }
 }
