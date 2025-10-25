@@ -1982,7 +1982,7 @@ MonoBehaviour:
   - {fileID: 1695456164}
   - {fileID: 1002795197}
   - {fileID: 616876405}
-  totalToShow: 3
+  totalToShow: 5
   autoPickOnStart: 1
   useFixedSeed: 0
   fixedSeed: 12345

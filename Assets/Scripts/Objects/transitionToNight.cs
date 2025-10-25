@@ -17,7 +17,7 @@ public class transitionToNight : MonoBehaviour
         if (playerOnRange && Input.GetKeyDown(KeyCode.E))
         {   
             fadeHandler.SetActive(true);
-            FindObjectOfType<fadeTransition>().FadeToScene("NightPhase");
+            FindObjectOfType<fadeTransition>().FadeToScene("Transition Test Scene");
         }
     }
 
