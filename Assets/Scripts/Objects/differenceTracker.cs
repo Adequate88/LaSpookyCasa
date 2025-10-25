@@ -29,6 +29,7 @@ public class DifferenceTracker : MonoBehaviour
         }
 
         totalSelected = picker.LastPicked.Count;
+        Debug.Log(totalSelected + "dhjcbvsd");
 
         // periodic refresh
         var wait = new WaitForSeconds(checkInterval);
@@ -53,5 +54,15 @@ public class DifferenceTracker : MonoBehaviour
     {
         // Debug.Log("All differences cleared!");
         // Example: open door, load next level, show banner, etc.
+    }
+
+    public int getRemainingActiveDifferences()
+    {
+        return activeRemaining;
+    }
+
+    public int getInitialDif()
+    {
+        return totalSelected;
     }
 }
