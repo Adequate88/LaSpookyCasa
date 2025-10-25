@@ -5,15 +5,20 @@ public class monsterScript : MonoBehaviour
 {
     private timerScript timer;
     [SerializeField] SpawnPointScript[] spawnPoints;
-    [SerializeField] private float moveTime;
+    private float moveTime;
     [SerializeField] private float stunTime;
     [SerializeField] private float fadeTime;
-    [SerializeField] private int startHealth;
-    [SerializeField] private int appearanceUnLikelyhood = 2;
+    private int startHealth;
+    private int appearanceUnLikelyhood = 2;
 
     [Header("hider settings")]
     [SerializeField] private bool hider;
-    [SerializeField] private bool skips;
+    private bool skips;
+
+    public void setMoveTime(float mt) { moveTime = mt; }
+    public void setStartHealth(int mt) { startHealth = mt; }
+    public void setAppearanceUnLikelyhood(int mt) { appearanceUnLikelyhood = mt; }
+    public void setSkips(bool mt) { skips = mt; }
 
 
     private float curMoveTime;
@@ -191,7 +196,6 @@ public class monsterScript : MonoBehaviour
 
     private void HandleFadeAnimation()
     {
-        Debug.Log("eyp");
         timer.count(ref curFadeTime);
         Color c = sprite.color;
         c.a = curFadeTime / fadeTime;

@@ -11,10 +11,12 @@ public class torchScript : MonoBehaviour
     private CircleCollider2D circleCollider;
     private timerScript timer;
 
-    [SerializeField] float TorchHealth;
+    private float TorchHealth;
     [SerializeField] AudioSource sfxOn;
     [SerializeField] AudioSource sfxOff;
     [SerializeField] AudioSource sfxHum;
+
+    public void setTorchHealth(float ht) { TorchHealth = ht;}
 
     private bool switchOn;
     private bool switchPressed;
@@ -60,6 +62,8 @@ public class torchScript : MonoBehaviour
         }
 
         torchTransform.position = worldPos;
+
+        Debug.Log(curTorchHealth);
 
     }
 
