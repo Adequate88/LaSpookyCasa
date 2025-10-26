@@ -110,7 +110,78 @@ We took an unorthodox approach to music generation with generative models. Inste
 
 > PROMPT: You are an expert musician specializing in Strudel music code. Create Strudel code for an ambient soundtrack designed for a horror pixel game. Recreate lavender theme song from pokemon blue/red. Ensure the code is functional, well-commented, and optimized for looping seamlessly in a game environment. Additionally, ensure that the code can run on the base version of Strudel REPL (https://strudel.cc/).
 
-This was done multiple times until a decent output was given. This basic song template from the model was then tweaked to our liking. We've found that this form of music generation is not entirely consistent. ChatGPTwould occasionally hallucinate and provide code that did not follow the Strudel syntax. Nevertheless, once it provided correct code, we found that this form of music generation is ideal for people who still want to have easy access to editing the music.
+```
+// Ambient horror soundtrack (original, runs on base Strudel REPL)
+
+// Tempo
+setcpm(36)
+
+// (1) Sub drone / low bed
+note("<c1 c1 c1 c1>*8")
+  .sound("sine")
+  .gain(0.45)
+  .lpf("<80 120 60 100>")
+  .room(0.65)
+  .clip(0.8)
+  .slow(4)
+
+// (2) Haunted pad / evolving texture
+note("<[c2 c3]*16 [eb2 eb3]*8 [f2 f3]*8>")
+  .sound("sawtooth")
+  .gain(0.35)
+  .lpf("<400 800 600 1000>")
+  .delay(0.45)
+  .delaytime("<0.375 0.5 0.25 0.75>")
+  .delayfeedback(0.42)
+  .room(0.65)
+  .pan("<-0.25 0.25>")
+  .slow(2)
+
+// (3) Sparse metallic plucks (haunting high notes)
+note("~ <g5 ~ e5> ~ <bb5 ~ a5> ~ <g5 ~>")
+  .sound("sine")
+  .gain(0.18)
+  .speed("<1 0.99 1 1.01>")
+  .room(0.9)
+  .delay(0.5)
+  .delaytime("<0.5 0.75 0.25 0.375>")
+  .delayfeedback(0.6)
+  .clip(0.9)
+  .pan("<0.4 -0.4 0.2 -0.2>")
+  .slow(1)
+
+// (4) Heartbeat / pulse (simulated kick using low sine hits)
+note("c1 ~ ~ ~")
+  .sound("sine")
+  .gain(0.3)
+  .lpf(150)
+  .room(0.2)
+  .delay(0.25)
+  .delaytime(0.5)
+  .delayfeedback(0.1)
+
+// (5) Textural ticks / noise (use high sine clicks)
+note("c7*16")
+  .sound("sine")
+  .gain(0.05)
+  .speed(8)   // make it very short/clicky
+  .pan("<-0.6 0.6>")
+  .room(0.15)
+  .slow(8)
+
+// (6) Micro-melody generator
+note("<[e4 ~ g4]*4 [d4 ~ f4]*4>")
+  .sound("triangle")
+  .gain(0.14)
+  .lpf("<1200 800 900 700>")
+  .pan("<-0.2 0.2>")
+  .delay(0.42)
+  .delayfeedback(0.38)
+  .room(0.65)
+  .slow(2)`
+```
+
+This was done multiple times until a decent output was given. This basic song template from the model was then tweaked to our liking. We've found that this form of music generation is not entirely consistent. ChatGPTwould occasionally hallucinate and provide code that did not follow the Strudel syntax. Nevertheless, once it provided correct code, we found that this form of music generation is ideal for people who still want to have easy access to editing the music (You can copy and paste this into strudel.cc to play it!)
 
 ---
 
