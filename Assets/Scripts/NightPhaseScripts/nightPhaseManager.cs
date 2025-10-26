@@ -13,6 +13,9 @@ public class nightPhaseManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI introText;
     [SerializeField] private float outroTime;
 
+    // Activate when torch dies
+    [SerializeField] private TextMeshProUGUI torchDeadText;
+
 
     [SerializeField] AudioSource sfxAmbient;
     private InputActions inputActions;
@@ -38,23 +41,26 @@ public class nightPhaseManager : MonoBehaviour
         nightActive = false;
         sleeping = false;
         curOutroTime = outroTime;
+
+        if (torchDeadText != null) torchDeadText.enabled = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        
         bool sleepInput = inputActions.PlayerNight.Sleep.IsPressed();
 
         sleepBarScript.barUpdate(sleepInput, curSleepTimeInput, sleepTimeInput);
 
         if (!sleeping) {
 
-
-
             if (!nightActive && inputActions.PlayerNight.Torch.IsPressed())
             {
                 nightActive = true;
                 introText.enabled = false;
+                torchDeadText.enabled = false;
                 monsterScript.setAwake();
             }
 
@@ -63,6 +69,7 @@ public class nightPhaseManager : MonoBehaviour
 
                 timer.count(ref curSleepTimeInput);
                 introText.enabled = false;
+                torchDeadText.enabled = false;
                 if (curSleepTimeInput <= 0)
                 {
                     sfxAmbient.Stop();
@@ -82,6 +89,8 @@ public class nightPhaseManager : MonoBehaviour
             }
             else
             {
+                // Activate torch dead text when torch health reaches zero
+                if (torchScript.getTorchHealth() <= 0f) torchDeadText.enabled = true;
                 curSleepTimeInput = sleepTimeInput;
             }
         }
