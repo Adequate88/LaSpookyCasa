@@ -1,5 +1,7 @@
 # Documentation 
 
+---
+
 ## Work Distribution and Tasks
 
 Alessandro Salo: Game's Day Time Phase, Music and SFX Generation, Base Images and 'Differences' Generation, Asset Generation, Video Generation
@@ -10,6 +12,8 @@ Angelo Patane: Game's Day Time Phase, Music and SFX generation, Asset Generation
 
 Alex (idk how to spell lol): Game's Night Time Phase, Asset Generation, Concept Art, Sketching, Video Generation
 - Retro Diffusion + ChatGPT5
+
+---
 
 ## Image Generation
 
@@ -28,6 +32,8 @@ We did this several times until we found something we liked. In the end we used 
 
 ![Alt text](DocumentationImages/finalIterationConceptArt.png)
 
+---
+
 ### Game Assets:
 
 To generate our assets we used ChatGPT5 once again. We found references and then provided them to GPT along with a prompt to generate a spritesheet consisting of all the assets required in the scene (that being a boys room). In this particular case, given that creating a full spritesheet is a complicated task, we used ChatGPT5 Agent Mode, which was successful in creating a spritesheet.
@@ -42,10 +48,11 @@ Generated Spritesheet:
 
 After generated the spritesheet, we used Aseprite to isolate each sprite, reduce the size to 32x32 resolution, and to make minor touchups. The same was done to generate tilesets.
 
+---
+
 ### Main Menu and Gameover Screens
 
 Retrodiffusion was used.
-
 
 >*Prompt: Cinematic main menu background for a psychological horror game titled "Hide and Seek". The scene shows a dimly lit child’s bedroom at night. A soft bedside lamp casts a small pool of warm light, contrasting against deep blue moonlight filtering through the window. Toys and books are scattered on the carpet, slightly disordered. A small wooden desk holds a handwritten note from the boy’s mother — the paper looks aged and tinted yellow, the handwriting childlike but unnervingly uneven. One corner of the room fades into darkness where the closet door is slightly ajar, its interior pitch black. A subtle, almost imperceptible puppet’s silhouette or shadow can be seen in that darkness, just enough to cause unease. The overall tone mixes innocence and dread — a child’s room that should feel safe, yet something feels deeply wrong. The walls have colorful crayon drawings, but a few are disturbingly altered — eyes crossed out, smiles smeared, faint shapes hidden in the scribbles. The flashlight lies on the floor, its weak beam illuminating dust motes in the air. The game title “HIDE AND SEEK” appears centered in frame, drawn in childish crayon-style letters — slightly smeared, uneven, and unsettling, glowing faintly in the dark. Subtle fog or haze near the floor, hinting at something unnatural. Color palette: desaturated blues and browns, soft orange lamplight, pale moonlight contrast, gentle cinematic shadows. Mood: eerie, suspenseful, melancholic — childlike wonder tainted by fear. Lighting: low-key, cinematic, with realistic textures and volumetric depth. --style cinematic horror --lighting low key --realistic details --depth of field focus on the note and title text --mood hauntingly beautiful tension.*
 
@@ -58,6 +65,7 @@ Final Version:
 Final Version:
 ![Game Over Menu 4](./Assets/Sprites/Menu/gameover.png)
 
+---
 
 ### Base Images and 'Differences'
 
@@ -92,6 +100,8 @@ Final Image:
 
 The resulting images were fairly good in quality and consistency. One primary downside in this approach was that the amount of 'noise' present in each generated image was not consistent. Some images had nearly no visible noise, whilst some other had a significant amount of it.
 
+---
+
 ## Music and Sound Generation
 
 ### In-game Music
@@ -101,6 +111,8 @@ We took an unorthodox approach to music generation with generative models. Inste
 > PROMPT: You are an expert musician specializing in Strudel music code. Create Strudel code for an ambient soundtrack designed for a horror pixel game. Recreate lavender theme song from pokemon blue/red. Ensure the code is functional, well-commented, and optimized for looping seamlessly in a game environment. Additionally, ensure that the code can run on the base version of Strudel REPL (https://strudel.cc/).
 
 This was done multiple times until a decent output was given. This basic song template from the model was then tweaked to our liking. We've found that this form of music generation is not entirely consistent. ChatGPTwould occasionally hallucinate and provide code that did not follow the Strudel syntax. Nevertheless, once it provided correct code, we found that this form of music generation is ideal for people who still want to have easy access to editing the music.
+
+---
 
 ### SFX (Sound Effects)
 
@@ -175,6 +187,8 @@ All Screams had:
 **Negative:**  
 > music, melody, rhythm, vocals, speech, background ambience, echo, reverb, distortion, low quality, hiss, metallic noise, unwanted artifacts, wind noise  
 
+---
+
 ## Animations/Video Generation
 
 ### Monster Jump Scare
@@ -186,6 +200,8 @@ Generating animations using ChatGPT was not a successful in our experience. We a
 ![Alt text](DocumentationImages/finalFrameEg.png)
 
 We then utilized these inital and final frames in a ComfyUI pipeline using wan2.2. This pipeline took both an inital frame, a final frame, and a text prompt to generate a video. We utilized the above generated images to create our animation of a monster lunging towards the screen. To keep within the style of our game, we used a pixelator and then only took a handful of frames from the video to use in our game.
+
+---
 
 ### Player Animations
 
