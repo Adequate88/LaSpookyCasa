@@ -49,5 +49,6 @@ public class transitionToNight : MonoBehaviour
         setup.moveTime = setup.moveTimesNight[setup.day - 1];
         setup.appearanceUnLikelyhood = setup.appearnceProbsNight[setup.day - 1];
         setup.skips = true;
+        setup.maxWaitTime = setup.maxWaitTimes[setup.day - 1];
     }
 }

@@ -10,6 +10,7 @@ public class NightSetupManager : MonoBehaviour
     public int startHealth;
     public int appearanceUnLikelyhood;
     public bool skips;
+    public float maxWaitTime;
 
     [Header("Torch Settings")]
     public float torchHealth;
@@ -18,6 +19,7 @@ public class NightSetupManager : MonoBehaviour
     public int[] MaxStartHealth = new int[3];
     public float[] moveTimesNight = new float[3];
     public int[] appearnceProbsNight = new int[3];
+    public float[] maxWaitTimes = new float[3];
     public int day = 0;
     public bool completed = false;
 

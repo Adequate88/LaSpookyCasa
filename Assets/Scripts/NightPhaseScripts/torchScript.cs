@@ -63,8 +63,6 @@ public class torchScript : MonoBehaviour
 
         torchTransform.position = worldPos;
 
-        Debug.Log(curTorchHealth);
-
     }
 
     private void FixedUpdate()

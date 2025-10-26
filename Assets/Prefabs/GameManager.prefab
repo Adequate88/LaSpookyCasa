@@ -48,12 +48,17 @@ MonoBehaviour:
   startHealth: 2
   appearanceUnLikelyhood: 2
   skips: 1
+  maxWaitTime: 0
   torchHealth: 100
   MaxStartHealth: 080000000a0000000c000000
   moveTimesNight:
+  - 3
   - 2
   - 1
-  - 0.5
   appearnceProbsNight: 04000000080000000c000000
+  maxWaitTimes:
+  - 10
+  - 15
+  - 20
   day: 1
   completed: 0
