@@ -32,20 +32,22 @@ public class typeWriterEffect : MonoBehaviour
     [Header("Screen Fade")]
     public CanvasGroup fadePanel;
     public float fadeDuration = 1.5f;
-
+    
     [Header("Game Flow Hooks")]
     public UnityEvent onPlayerControlGained;    // fire when player should move around
     public UnityEvent onPlayerControlLost;      // fire when we resume auto dialogue
     public UnityEvent onIntroFinished;          // fire after the last line finishes
+    public GameObject bedInteractable;
 
     // Opening block
     private readonly string[] openingLines = new string[]
     {
-        "Mom and Dad said they'll only be gone for a week.",
-        "They left this morning... before the sun came up.",
+        "mom and dad said they'll only be gone for a week.",
+        "they left this morning... before the sun came up.",
         "I'm not scared or anything. Just... it feels weird when it's this quiet.",
         "Anyway, I should probably clean my room before they get back.",
-        "Or at least pretend I tried."
+        "Or at least pretend I tried.",
+        " ",
     };
 
     // Lines that play right after all interactions are done
@@ -54,6 +56,7 @@ public class typeWriterEffect : MonoBehaviour
         "Okay... I think that was everything.",
         "The room looks kind of better... I guess.",
         "Maybe I'll rest for a minute.",
+        " ",
     };
 
     // Final realization lines
@@ -61,8 +64,14 @@ public class typeWriterEffect : MonoBehaviour
     {
         "...What was that?",
         "Hello?",
-        "Mom? Dad? That was not funny.",
+        "Mom? Dad? That wasn't funny.",
         "...is someone there?",
+        " ",
+    };
+
+    private readonly string[] sleepTime = new string[]
+    {
+        "Maybe I'll be safer in bed...",
     };
 
     // state
@@ -75,7 +84,9 @@ public class typeWriterEffect : MonoBehaviour
         if (dialogueText != null) dialogueText.text = "";
         globalVolume.SetActive(false);
         bloodyText.SetActive(false);
+        bedInteractable.SetActive(false);
         runner = StartCoroutine(PlayWholeIntro());
+        
     }
 
     // call this from your interaction tracker when the player finished everything
@@ -103,7 +114,7 @@ public class typeWriterEffect : MonoBehaviour
 
         // wait until player finishes interactions
         yield return new WaitUntil(() => interactionsComplete);
-
+        yield return new WaitForSeconds(0.75f);
         // fade back to dialogue (optional, can remove if you don't want a fade before shift)
         yield return StartCoroutine(FadeIn());
         yield return new WaitForSeconds(0.25f);
@@ -135,7 +146,11 @@ public class typeWriterEffect : MonoBehaviour
         yield return StartCoroutine(FadeOut());
 
         // done
-        onIntroFinished?.Invoke();
+        yield return new WaitForSeconds(5.0f);
+        yield return StartCoroutine(MoveDialogueBox(-376.0f));
+        yield return StartCoroutine(ShowDialogueBox());
+        yield return StartCoroutine(prepareSleep());
+
     }
 
     private IEnumerator FadeOut()
@@ -269,7 +284,6 @@ public class typeWriterEffect : MonoBehaviour
     }
     private IEnumerator activateVolume()
     {
-        // the laugh
         if (globalVolume != null)
         {
             globalVolume.SetActive(true);
@@ -279,13 +293,37 @@ public class typeWriterEffect : MonoBehaviour
 
     private IEnumerator showBloodyText()
     {
-        // the laugh
         if (bloodyText != null)
         {
             bloodyText.SetActive(true);
             yield return new WaitForSeconds(0.5f);
         }
     }
+
+    private IEnumerator prepareSleep()
+    {
+        if (bedInteractable != null)
+        {
+            bedInteractable.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        yield return StartCoroutine(TypeLine("Maybe I'll be safer in bed..."));
+
+    }
+
+    private IEnumerator MoveDialogueBox(float moveDistance = -200f)
+    {
+        RectTransform rect = dialogueBox.GetComponent<RectTransform>();
+        if (rect == null) yield break;
+
+        // Move it instantly down by moveDistance on Y axis
+        rect.anchoredPosition += new Vector2(0f, moveDistance);
+
+        yield return new WaitForSeconds(0.5f); // optional pause after move
+    }
+
+    
 
     // optional helper if you want to cancel this sequence
     public void StopIntro()
