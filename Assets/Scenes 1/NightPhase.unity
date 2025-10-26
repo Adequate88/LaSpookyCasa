@@ -1501,6 +1501,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   maxHerringWaitTime: 20
   likelyhoodOutof: 3
+  sounds:
+  - {fileID: 8300000, guid: 3b1a3de34c2e25f4796a4c8de73b9dcf, type: 3}
+  - {fileID: 8300000, guid: f8d3179af3f2ed56aa86b0c7e574b202, type: 3}
+  - {fileID: 8300000, guid: c0ef1e1b49a2b244b9ef903da84c2c21, type: 3}
 --- !u!82 &679426891
 AudioSource:
   m_ObjectHideFlags: 0
