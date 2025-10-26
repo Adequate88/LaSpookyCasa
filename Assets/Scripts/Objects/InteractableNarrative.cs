@@ -1,23 +1,26 @@
 using TMPro;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public class InteractableNarrative : MonoBehaviour
 {
     public GameObject imageToShow;
     public GameObject grayOut;
     public GameObject Ebutton;
+    public NarrativeController narrativeHandler;
+
     private GameObject canvasGO;
-
     private GameObject parentObject;
-
     private SpriteRenderer parentSpriteRenderer;
+    private bool playerOnRange;
+    private bool alreadyChecked = false;
+
+
 
     [SerializeField] Color interactColor = new Color(0.796f, 0.784f, 0.141f, 1f);
     [SerializeField] AudioSource sfxEnter;
     [SerializeField] AudioSource sfxExit;
 
 
-    private bool playerOnRange;
 
     void Awake()
     {
@@ -41,6 +44,7 @@ public class Interactable : MonoBehaviour
         Ebutton.SetActive(false);
 
         parentSpriteRenderer = parentObject.GetComponent<SpriteRenderer>();
+        alreadyChecked = false;
     }
 
     void Update()
@@ -58,6 +62,14 @@ public class Interactable : MonoBehaviour
             canvasGO.SetActive(!canvasGO.activeSelf);
             grayOut.SetActive(!grayOut.activeSelf); 
             imageToShow.SetActive(!imageToShow.activeSelf);
+
+            if(!alreadyChecked) {
+                
+                alreadyChecked = true;
+                narrativeHandler.updateCount();
+
+            }
+
         }
     }
 
