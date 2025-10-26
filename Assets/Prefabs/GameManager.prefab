@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NightSetupManager
   moveTime: 2
   startHealth: 2
-  appearanceUnLikelyhood: 2
+  appearanceUnLikelyhood: 20
   skips: 1
-  maxWaitTime: 0
+  maxWaitResets: 2
   torchHealth: 100
   MaxStartHealth: 080000000a0000000c000000
   moveTimesNight:
@@ -56,9 +56,9 @@ MonoBehaviour:
   - 2
   - 1
   appearnceProbsNight: 04000000080000000c000000
-  maxWaitTimes:
-  - 10
-  - 15
-  - 20
+  nightMaxWeightResets:
+  - 4
+  - 6
+  - 9
   day: 1
   completed: 0

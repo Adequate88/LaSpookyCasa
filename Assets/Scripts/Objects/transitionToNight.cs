@@ -45,10 +45,12 @@ public class transitionToNight : MonoBehaviour
 
     private void prepareNight(int remaining, int total, NightSetupManager setup)
     {
-        setup.startHealth = setup.MaxStartHealth[setup.day] - (total - remaining);
+        setup.startHealth = setup.MinStartHealth[setup.day - 1] + remaining;
+        Debug.Log("remaining" + remaining);
+        Debug.Log("sertup health" + setup.startHealth);
         setup.moveTime = setup.moveTimesNight[setup.day - 1];
         setup.appearanceUnLikelyhood = setup.appearnceProbsNight[setup.day - 1];
         setup.skips = true;
-        setup.maxWaitTime = setup.maxWaitTimes[setup.day - 1];
+        setup.maxWaitResets = setup.nightMaxWeightResets[setup.day - 1];
     }
 }

@@ -147,7 +147,7 @@ public class nightPhaseManager : MonoBehaviour
         Debug.Log(setup.appearanceUnLikelyhood);
         torchScript.setTorchHealth(setup.torchHealth);
         Debug.Log(setup.torchHealth);
-        monsterScript.setMaxWait(setup.maxWaitTime);
+        monsterScript.setMaxWaitResets(setup.maxWaitResets);
     }
 
 }

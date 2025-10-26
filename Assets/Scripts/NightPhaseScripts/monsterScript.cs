@@ -10,8 +10,8 @@ public class monsterScript : MonoBehaviour
     [SerializeField] private float fadeTime;
     private int startHealth;
     private int appearanceUnLikelyhood = 2;
-    private float maxWaitTime;
-    private float curWaitTime;
+    private float maxWaitResets;
+    private float resetCount;
     private AudioSource audioMoster;
     [SerializeField] AudioClip[] MoveNoises = new AudioClip[5];
  
@@ -25,7 +25,7 @@ public class monsterScript : MonoBehaviour
     public void setStartHealth(int mt) { startHealth = mt; }
     public void setAppearanceUnLikelyhood(int mt) { appearanceUnLikelyhood = mt; }
     public void setSkips(bool mt) { skips = mt; }
-    public void setMaxWait(float mt) { maxWaitTime = mt; }
+    public void setMaxWaitResets(float mt) { maxWaitResets = mt; }
 
 
     private float curMoveTime;
@@ -65,6 +65,8 @@ public class monsterScript : MonoBehaviour
         anim = false;
         curHealth = startHealth;
         isAwake = false;
+        resetCount = 0;
+        Debug.Log("health bitch" + curHealth);
     }
 
     void FixedUpdate()
@@ -157,18 +159,20 @@ public class monsterScript : MonoBehaviour
 
     private void HidingBehaviourHandle()
     {
+        Debug.Log(resetCount + "have been reset");
         if (((curMoveTime <= 0)) && !flashed && (nextSpawnIndex < spawnPoints.Length))
         {
             int rando = (Random.Range(0, appearanceUnLikelyhood));
             Debug.Log("Im Stuck 4s");
             // choose if visible
-            if ((rando != 1 || isActive))
+            if ((rando != 1 || isActive) && !(resetCount >= maxWaitResets))
             {
              
                 enemyCollider.enabled = false;
                 sprite.enabled = false;
                 isActive = false;
                 Debug.Log("Im Stuck 3");
+                resetCount += 1;
 
             }
             else
@@ -180,16 +184,21 @@ public class monsterScript : MonoBehaviour
                     audioMoster.PlayOneShot(audioMoster.clip);
                     Debug.Log("Im Stuck 1");
                 }
-                else
+                else if ((skips && spawnPoints[nextSpawnIndex].getVisible()) && curSpawnIndex == spawnPoints.Length - 1)
+                {
+                    Debug.Log("Im Stuck 6");
+                }
+                else if (!spawnPoints[nextSpawnIndex].getVisible())
                 {
                     enemyCollider.enabled = true;
                     sprite.enabled = true;
                     isActive = true;
                     audioMoster.clip = MoveNoises[Random.Range(0, (MoveNoises.Length - 1))];
                     audioMoster.PlayOneShot(audioMoster.clip);
+                    resetCount = 0;
                     Debug.Log("Im Stuck 2");
 
-                }  
+                }
             }
 
             int spawn = nextSpawnIndex;
@@ -208,7 +217,7 @@ public class monsterScript : MonoBehaviour
             }
 
         }
-        else if (nextSpawnIndex == spawnPoints.Length && ((curMoveTime <= 0)) && isActive)
+        else if (nextSpawnIndex == spawnPoints.Length && ((curMoveTime <= 0)) && isActive && !flashed)
         {
             enemyCollider.enabled = false;
             sprite.enabled = false;
