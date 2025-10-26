@@ -32,12 +32,17 @@ public class typeWriterEffect : MonoBehaviour
     [Header("Screen Fade")]
     public CanvasGroup fadePanel;
     public float fadeDuration = 1.5f;
-    
+    public GameObject arrow;
+
     [Header("Game Flow Hooks")]
     public UnityEvent onPlayerControlGained;    // fire when player should move around
     public UnityEvent onPlayerControlLost;      // fire when we resume auto dialogue
     public UnityEvent onIntroFinished;          // fire after the last line finishes
     public GameObject bedInteractable;
+
+    private bool isTyping;             // are we currently revealing characters
+    private bool skipCurrentLine;      // finish this line right now
+    private bool skipCurrentBlock;     // skip waits and advance to next line
 
     // Opening block
     private readonly string[] openingLines = new string[]
@@ -85,8 +90,21 @@ public class typeWriterEffect : MonoBehaviour
         globalVolume.SetActive(false);
         bloodyText.SetActive(false);
         bedInteractable.SetActive(false);
+        arrow.SetActive(false);
         runner = StartCoroutine(PlayWholeIntro());
         
+    }
+
+    void Update()
+    {
+        // Esc behavior:
+        // - if a line is typing, finish it immediately
+        // - if idle between chars or lines, skip the wait and move on
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isTyping) skipCurrentLine = true;
+            else          skipCurrentBlock = true;
+        }
     }
 
     // call this from your interaction tracker when the player finished everything
@@ -141,13 +159,14 @@ public class typeWriterEffect : MonoBehaviour
         // Turn on global volume HERE
         yield return StartCoroutine(activateVolume());
         yield return StartCoroutine(showBloodyText());
+        yield return StartCoroutine(showArrow());
         // fade to black for transition to next part (optional)
         yield return StartCoroutine(HideDialogueBox());
         yield return StartCoroutine(FadeOut());
 
         // done
         yield return new WaitForSeconds(5.0f);
-        yield return StartCoroutine(MoveDialogueBox(-376.0f));
+        yield return StartCoroutine(MoveDialogueBox(-400.0f));
         yield return StartCoroutine(ShowDialogueBox());
         yield return StartCoroutine(prepareSleep());
 
@@ -223,10 +242,22 @@ public class typeWriterEffect : MonoBehaviour
 
     private IEnumerator PlayBlock(string[] lines)
     {
+        skipCurrentBlock = false; // reset at start of a block
+
         for (int i = 0; i < lines.Length; i++)
         {
             yield return StartCoroutine(TypeLine(lines[i]));
-            yield return new WaitForSeconds(linePause);
+
+            // if Esc was pressed between lines, skip the pause
+            if (skipCurrentBlock)
+            {
+                skipCurrentBlock = false; // clear so next block behaves normally
+            }
+            else
+            {
+                // wait, but allow Esc to cut it short
+                yield return StartCoroutine(WaitOrSkip(linePause));
+            }
         }
     }
 
@@ -234,23 +265,55 @@ public class typeWriterEffect : MonoBehaviour
     {
         if (dialogueText == null) yield break;
 
+        isTyping = true;
+        skipCurrentLine = false;
+
         dialogueText.text = "";
         for (int i = 0; i < line.Length; i++)
         {
+            // if Esc during typing: instantly complete the line
+            if (skipCurrentLine || skipCurrentBlock)
+            {
+                dialogueText.text = line;
+                skipCurrentLine = false;
+                break;
+            }
+
             char c = line[i];
             dialogueText.text += c;
 
             if (typingTick != null) typingTick.Play();
 
-            // light punctuation rhythm
+            // natural rhythm, but make it skippable mid wait
             if (c == '.' || c == ',' || c == ';' || c == ':' || c == '!' || c == '?')
-            {
-                yield return new WaitForSeconds(punctuationHold);
-            }
+                yield return StartCoroutine(WaitCharDelay(punctuationHold));
             else
-            {
-                yield return new WaitForSeconds(typingSpeed);
-            }
+                yield return StartCoroutine(WaitCharDelay(typingSpeed));
+        }
+
+        isTyping = false;
+    }
+
+    // small helper that waits but aborts if Esc is pressed
+    private IEnumerator WaitOrSkip(float seconds)
+    {
+        float t = 0f;
+        while (t < seconds)
+        {
+            if (skipCurrentBlock) yield break;
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    private IEnumerator WaitCharDelay(float seconds)
+    {
+        float t = 0f;
+        while (t < seconds)
+        {
+            if (skipCurrentLine || skipCurrentBlock) yield break;
+            t += Time.deltaTime;
+            yield return null;
         }
     }
 
@@ -296,6 +359,15 @@ public class typeWriterEffect : MonoBehaviour
         if (bloodyText != null)
         {
             bloodyText.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private IEnumerator showArrow()
+    {
+        if (arrow != null)
+        {
+            arrow.SetActive(true);
             yield return new WaitForSeconds(0.5f);
         }
     }
