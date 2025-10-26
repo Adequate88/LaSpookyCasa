@@ -768,7 +768,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529459516}
   m_CullTransparentMesh: 1
---- !u!1001 &725420062
+--- !u!1001 &695648103
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -777,12 +777,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 47559942597615030, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
-      propertyPath: startHealth
+      propertyPath: 'MinStartHealth.Array.data[0]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 47559942597615030, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
-      propertyPath: 'MaxStartHealth.Array.data[0]'
-      value: 1
+      propertyPath: 'MinStartHealth.Array.data[1]'
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 47559942597615030, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
+      propertyPath: 'MinStartHealth.Array.data[2]'
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4674642720732889675, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1137,7 +1141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -184}
+  m_AnchoredPosition: {x: 0, y: 1.1}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009780434
@@ -1273,7 +1277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -184}
+  m_AnchoredPosition: {x: 0, y: -1}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600953756
@@ -1383,4 +1387,4 @@ SceneRoots:
   - {fileID: 192224531}
   - {fileID: 229897920}
   - {fileID: 232217040}
-  - {fileID: 725420062}
+  - {fileID: 695648103}

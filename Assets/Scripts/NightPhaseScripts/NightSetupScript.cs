@@ -10,16 +10,16 @@ public class NightSetupManager : MonoBehaviour
     public int startHealth;
     public int appearanceUnLikelyhood;
     public bool skips;
-    public float maxWaitTime;
+    public float maxWaitResets;
 
     [Header("Torch Settings")]
     public float torchHealth;
 
     [Header("Extra Setup Variables")]
-    public int[] MaxStartHealth = new int[3];
+    public int[] MinStartHealth = new int[3];
     public float[] moveTimesNight = new float[3];
     public int[] appearnceProbsNight = new int[3];
-    public float[] maxWaitTimes = new float[3];
+    public float[] nightMaxWeightResets = new float[3];
     public int day = 0;
     public bool completed = false;
 
