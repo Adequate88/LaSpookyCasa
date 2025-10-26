@@ -727,7 +727,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: IntroductionScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &529459519
@@ -776,6 +776,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47559942597615030, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
+      propertyPath: startHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 47559942597615030, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
+      propertyPath: 'MaxStartHealth.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4674642720732889675, guid: 2f5cb2b38d8d4314cb21a273584eda96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.29922
