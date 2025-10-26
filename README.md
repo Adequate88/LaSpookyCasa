@@ -10,7 +10,7 @@ Alessandro Salo: Game's Day Time Phase, Music and SFX Generation, Base Images an
 Angelo Patane: Game's Day Time Phase, Music and SFX generation, Asset Generation, Final Video, Animation Generation
 - Models Used: ComfyUI Pipeline + Retro Diffusion
 
-Alex (idk how to spell lol): Game's Night Time Phase, Asset Generation, Concept Art, Sketching, Video Generation
+Alex Gavriliu: Game's Night Time Phase, Asset Generation, Concept Art, Sketching, Video Generation
 - Retro Diffusion + ChatGPT5
 
 ---
